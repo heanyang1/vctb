@@ -278,3 +278,143 @@ button:disabled {
     gap: 6px;
   }
 }
+
+/* ------------------------------------------------------------------
+   Podcast Viewer (light theme)
+   These rules are intentionally unprefixed — IDs and classes used by
+   the podcast viewer are unique so making them part of the unified
+   stylesheet keeps the app visually consistent with the rest of the site.
+------------------------------------------------------------------ */
+
+main {
+  padding: 20px 32px;
+}
+
+#search {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+#query {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #e6e6e6;
+  background: #fff;
+  color: #222;
+}
+
+
+#content {
+  display: flex;
+  gap: 18px;
+}
+
+#results {
+  width: 340px;
+  background: #fff;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  color: #222;
+}
+
+#episodes {
+  flex: 1;
+  background: #fff;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #eee;
+}
+
+h2 {
+  margin: 4px 0 12px;
+  color: #2c3e50;
+}
+
+.pod-item {
+  display: flex;
+  gap: 10px;
+  padding: 8px;
+  border-radius: 8px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.pod-item:hover {
+  background: #f7f9fb;
+}
+
+.pod-art {
+  width: 56px;
+  height: 56px;
+  flex: 0 0 56px;
+  background: #f1f5f8;
+  border-radius: 8px;
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+}
+
+.pod-info {
+  flex: 1;
+}
+
+.pod-title {
+  font-weight: 600;
+  color: #1976d2;
+}
+
+.pod-author {
+  color: #607d8b;
+  font-size: 13px;
+}
+
+.meta {
+  color: #607d8b;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.episode {
+  padding: 8px;
+  border-bottom: 1px dashed #eee;
+}
+
+.episode .title {
+  font-weight: 600;
+}
+
+.episode .pub {
+  color: #607d8b;
+  font-size: 13px;
+}
+
+.download-btn {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: rgba(52, 152, 219, 0.06);
+  color: #1976d2;
+  text-decoration: none;
+  border: 1px solid rgba(52, 152, 219, 0.12);
+}
+
+footer {
+  padding: 18px 32px;
+  color: #607d8b;
+  font-size: 13px;
+}
+
+@media (max-width:900px) {
+  #content {
+    flex-direction: column;
+  }
+
+  #results {
+    width: 100%;
+  }
+}

@@ -8,7 +8,8 @@ All tools are static web pages.
 
 - Hacker News: Retrieves and displays the latest stories from Hacker News using the [Hacker News API](https://hacker-news.firebaseio.com/v0/topstories.json). Sometimes it is faster than visiting the HN site. 
 - Media Player: A media player on a static web page. It (only) supports playing files uploaded by the user.
-- Relic Interpreter: An old version of [Relic](https://github.com/heanyang1/relic). 
+- Podcast Viewer: Search podcasts (using iTunes search API) and list episodes with download links.
+- Relic Interpreter: An old version of [Relic](https://github.com/heanyang1/relic).
 
 ## License
 

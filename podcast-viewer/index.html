@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Podcast Viewer</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="podcast-viewer">
+    <nav class="top-nav">
+        <div class="container">
+            <a href="../index.html">Tools</a>
+        </div>
+    </nav>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <h1>Podcast Viewer</h1>
+        </div>
+    </header>
+
+    <main>
+        <section id="search">
+            <input id="query" type="search" placeholder="Search podcasts (e.g. 'python', 'news')" />
+            <button id="searchBtn">Search</button>
+        </section>
+
+        <section id="content">
+            <aside id="results">
+                <h2>Search results</h2>
+                <div id="resultsList">No results yet. Try a search.</div>
+            </aside>
+
+            <section id="episodes">
+                <h2 id="episodesTitle">Episodes</h2>
+                <div id="episodesMeta" class="meta"></div>
+                <div id="episodesList">Select a podcast to view episodes.</div>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <small>Uses the iTunes Search API and parses RSS feeds in-browser. Some feeds may require a proxy due to
+            CORS.</small>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
