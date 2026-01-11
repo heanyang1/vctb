@@ -51,6 +51,10 @@ jobs:
           rustup target add wasm32-unknown-unknown
           cargo build --target wasm32-unknown-unknown --release
           wasm-bindgen target/wasm32-unknown-unknown/release/relic.wasm --out-dir ./pkg --target web
+          cd ../wang-tiles
+          rustup target add wasm32-unknown-unknown
+          cargo build --target wasm32-unknown-unknown --release
+          wasm-bindgen target/wasm32-unknown-unknown/release/wang_tiles.wasm --out-dir ./pkg --target web
           cd ..
       
       - name: Setup Pages
