@@ -10,6 +10,7 @@ All tools are static web pages.
 - Media Player: A media player on a static web page. It (only) supports playing files uploaded by the user.
 - Podcast Viewer: Search podcasts (using iTunes search API) and list episodes with download links.
 - Relic Interpreter: An old version of [Relic](https://github.com/heanyang1/relic).
+- Wang Tiler: A replica of [Cat's Eye Wang Tiler](https://catseye.tc/article/Automata.md#backtracking-wang-tiler) that generates [Wang tiles](https://en.wikipedia.org/wiki/Wang_tile).
 
 ## License
 

@@ -62,7 +62,7 @@ enum Direction {
 }
 
 #[derive(Clone)]
-struct TilePos {
+pub struct TilePos {
     dir: Direction,
     total_step: usize,
     step: usize,
