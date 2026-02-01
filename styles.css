@@ -244,6 +244,33 @@ button:disabled {
 }
 
 /* === Hacker News small story list rules === */
+
+.story-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+}
+
+.story-item a {
+  flex: 1;
+  text-decoration: none;
+}
+
+.story-item input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+#selection-controls {
+  margin-top: 8px;
+  width: 100%;
+}
+
+#selected-links {
+  width: 100%;
+  box-sizing: border-box;
+}
+
 .story {
   margin: 12px 0;
   padding: 10px;
