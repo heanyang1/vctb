@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix Visualizer</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="matrix-visualizer">
+    <nav class="top-nav">
+        <div class="container">
+            <a href="../index.html">Tools</a>
+        </div>
+    </nav>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <h1>Matrix Visualizer</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="upload-container">
+            <div class="controls">
+            <div class="file-inputs">
+                <div class="file-input">
+                    <input type="file" id="matrixFile1" accept=".txt">
+                    <label for="matrixFile1" class="upload-btn">Choose Input File</label>
+                    <div id="inputFileList" class="file-list"></div>
+                </div>
+                <div class="file-input">
+                    <input type="file" id="matrixFile2" accept=".txt">
+                    <label for="matrixFile2" class="upload-btn">Choose Output File</label>
+                    <div id="outputFileList" class="file-list"></div>
+                </div>
+            </div>
+            <button id="loadBtn" class="load-button">Load Matrices</button>
+
+            <div class="color-picker" id="colorPicker">
+                <!-- Color pickers will be added here dynamically -->
+            </div>
+        </div>
+        </div>
+
+        <div class="canvas-container">
+            <div class="canvas-wrapper">
+                <h3>Input</h3>
+                <canvas id="matrixCanvas1"></canvas>
+            </div>
+            <div class="canvas-wrapper">
+                <h3>Output</h3>
+                <canvas id="matrixCanvas2"></canvas>
+            </div>
+        </div>
+
+        <div class="info">
+            <p>Input size: <span id="matrixSize1">-</span></p>
+            <p>Output size: <span id="matrixSize2">-</span></p>
+            <p>Unique values: <span id="uniqueValues">-</span> (shared palette)</p>
+        </div>
+    </div>
+
+    <script src="visualizer.js"></script>
+</body>
+
+</html>
