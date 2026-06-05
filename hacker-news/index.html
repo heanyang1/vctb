@@ -7,6 +7,16 @@
     <title>Hacker News Stories</title>
     <link rel="stylesheet" href="../styles.css">
     <style>
+        .story-item { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+        .story-item a { flex: 1; }
+        .comments-btn { font-size: 0.8rem; cursor: pointer; white-space: nowrap; }
+        .comments-section { width: 100%; margin-top: 0.5rem; padding-left: 1.5rem; border-left: 2px solid #ccc; }
+        .comments-tree { list-style: none; padding: 0; margin: 0; }
+        .comment-item { margin: 0.5rem 0; padding: 0.5rem; background: #f6f6f6; border-radius: 4px; }
+        .comment-meta { font-size: 0.8rem; color: #666; margin-bottom: 0.25rem; }
+        .comment-text { font-size: 0.9rem; line-height: 1.4; }
+        .comment-text p { margin: 0.25rem 0; }
+        .replies { margin-left: 1rem; border-left: 1px solid #ddd; padding-left: 0.5rem; }
     </style>
 </head>
 
