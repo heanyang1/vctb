@@ -6,51 +6,16 @@ This repository contains multiple mini-projects:
 
 ## Build, Lint, and Test Commands
 
-### Rust (wang-tiles)
+### Wang Tiles (Rust/WASM)
 
-**Build:**
 ```bash
 cd wang-tiles
-cargo build
+rustup target add wasm32-unknown-unknown
+cargo build --target wasm32-unknown-unknown --release
+~/.cargo/bin/wasm-bindgen target/wasm32-unknown-unknown/release/wang_tiles.wasm --out-dir ./pkg --target web
 ```
 
-**Build WASM:**
-```bash
-cd wang-tiles
-cargo build --target wasm32-unknown-unknown
-# Or with wasm-pack:
-wasm-pack build --target web
-```
-
-**Run tests:**
-```bash
-cd wang-tiles
-cargo test
-```
-
-**Run a single test:**
-```bash
-cd wang-tiles
-cargo test test_name_here
-# Or run tests matching a pattern:
-cargo test name_pattern
-```
-
-**Lint (clippy):**
-```bash
-cd wang-tiles
-cargo clippy
-cargo clippy -- -D warnings  # treat warnings as errors
-```
-
-**Format:**
-```bash
-cd wang-tiles
-cargo fmt
-cargo fmt -- --check  # check without modifying
-```
-
-**Note:** This project uses Rust edition 2024 (experimental). Ensure you have a nightly toolchain or recent stable that supports it.
+The generated files will be in `wang-tiles/pkg/`.
 
 ### JavaScript Projects
 
