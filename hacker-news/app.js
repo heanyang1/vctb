@@ -56,12 +56,12 @@ function displayStories(stories) {
                 }
             });
 
+            li.appendChild(checkbox);
             li.appendChild(a);
             const br = document.createElement('div');
             br.style.width = '100%';
             br.style.height = 0;
             li.appendChild(br);
-            li.appendChild(checkbox);
             li.appendChild(commentsBtn);
             storiesList.appendChild(li);
         }
