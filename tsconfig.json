@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowJs": false,
+    "checkJs": false,
+    "declaration": false,
+    "sourceMap": false,
+    "removeComments": true
+  },
+  "include": [
+    "hacker-news/app.ts",
+    "podcast-viewer/app.ts",
+    "matrix-visualizer/visualizer.ts",
+    "media-player/script.ts",
+    "clipboard-tool/app.ts",
+    "wang-tiles/app.ts",
+    "wang-tiles/tiler.ts"
+  ]
+}
