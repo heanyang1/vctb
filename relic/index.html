@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relic REPL</title>
+  <style>
+    :root {
+      --bg-color: #1e1e1e;
+      --text-color: #e0e0e0;
+      --prompt-color: #4caf50;
+      --input-color: #e0e0e0;
+      --output-color: #9e9e9e;
+      --error-color: #f44336;
+      --cursor-color: #4caf50;
+      --selection-bg: #264f78;
+    }
+
+    body {
+      font-family: 'Fira Code', 'Consolas', 'Monaco', monospace;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      margin: 0;
+      padding: 12px 20px;
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
+
+    .nav-bar {
+      background-color: #2d2d2d;
+      padding: 12px 20px;
+      margin-bottom: 20px;
+      display: flex;
+      gap: 20px;
+      border-bottom: 1px solid #444;
+    }
+
+    .nav-link {
+      color: #e0e0e0;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    }
+
+    .nav-link:hover {
+      color: #4caf50;
+    }
+
+    #terminal {
+      max-width: 900px;
+      margin: 0 auto;
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #output {
+      flex-grow: 1;
+      overflow-y: auto;
+      margin-bottom: 10px;
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.2);
+      border-radius: 4px;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-size: 14px;
+    }
+
+    .prompt {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .prompt-symbol {
+      color: var(--prompt-color);
+      margin-right: 8px;
+      user-select: none;
+    }
+
+    #input-line {
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
+
+    #command-input {
+      flex-grow: 1;
+      background: transparent;
+      border: none;
+      color: var(--input-color);
+      font-family: inherit;
+      font-size: 14px;
+      outline: none;
+      caret-color: var(--cursor-color);
+    }
+
+    .output-line {
+      margin: 4px 0;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    .output {
+      color: var(--output-color);
+    }
+
+    .error {
+      color: var(--error-color);
+    }
+
+    .prompt-text {
+      color: var(--prompt-color);
+    }
+
+    /* Scrollbar styling */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #2d2d2d;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #555;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #777;
+    }
+
+    /* Selection styling */
+    ::selection {
+      background-color: var(--selection-bg);
+      color: white;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="nav-bar">
+    <a href="https://github.com/heanyang1/relic" target="_blank" class="nav-link">GitHub Repository</a>
+    <a href="https://heanyang1.github.io/relic/relic" target="_blank" class="nav-link">Documentation</a>
+    <a href="old_interpreter.html" target="_blank" class="nav-link">Old Interpreter</a>
+  </div>
+  <div id="terminal">
+    <div id="output"></div>
+    <div class="prompt">
+      <span class="prompt-symbol">❯</span>
+      <div id="input-line">
+        <input type="text" id="command-input" autofocus>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="./repl.js"></script>
+</body>
+</html>

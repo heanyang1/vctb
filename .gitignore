@@ -10,3 +10,4 @@ media-player/script.js
 clipboard-tool/app.js
 wang-tiles/app.js
 wang-tiles/tiler.js
+relic/**/*.js

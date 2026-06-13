@@ -30,17 +30,6 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
-      - name: Install Rust
-        uses: actions-rs/toolchain@v1
-        with:
-          toolchain: stable
-          override: true
-      - name: Build Relic WASM
-        run: |
-          cd relic
-          rustup target add wasm32-unknown-unknown
-          cargo build --target wasm32-unknown-unknown --release
-          wasm-bindgen target/wasm32-unknown-unknown/release/relic.wasm --out-dir ./pkg --target web
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

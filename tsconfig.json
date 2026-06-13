@@ -20,6 +20,14 @@
     "media-player/script.ts",
     "clipboard-tool/app.ts",
     "wang-tiles/app.ts",
-    "wang-tiles/tiler.ts"
+    "wang-tiles/tiler.ts",
+    "relic/symbol.ts",
+    "relic/tokenizer.ts",
+    "relic/node.ts",
+    "relic/parser.ts",
+    "relic/preprocess.ts",
+    "relic/eval.ts",
+    "relic/repl.ts",
+    "relic/tests/test.ts"
   ]
 }

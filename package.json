@@ -1,11 +1,14 @@
 {
   "name": "vctb",
   "private": true,
+  "type": "module",
   "scripts": {
     "build": "tsc",
-    "watch": "tsc --watch"
+    "watch": "tsc --watch",
+    "test": "node --experimental-modules relic/tests/test.js"
   },
   "devDependencies": {
+    "@types/node": "^25.9.3",
     "typescript": "^5.8.0"
   }
 }
